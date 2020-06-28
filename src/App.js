@@ -1,12 +1,18 @@
-import React from "react";
-import logo from "./logo.svg";
-import Toggle from "./components/Toggle";
+import React, { useState } from "react";
+import Switch from "./components/Switch";
 import "./App.css";
 
 function App() {
+  // const[valueOff, setValueOff] = useState(true);
+  const[valueOn, setValueOn] = useState(false);
+
   return (
     <div className="App">
-      <Toggle />
+      <Switch 
+        buttonOn={ valueOn }
+        handleToggle={ () => setValueOn(!valueOn) }
+        onColor='#EF476F'
+      />
     </div>
   );
 }
