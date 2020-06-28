@@ -1,18 +1,28 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 class Toggle extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  state = {
+    toggleOn: true,
+    color: '#000'
+  };
 
-  handleClick() {
-    // todo
+  handleClick = () => {
+    this.setState({
+      toggleOn: !this.state.toggleOn,
+      color: '#FFF'
+    });
+    // console.log(this.state.toggleOn)
   }
 
   render() {
-    return <button>ON</button>;
-  }
+    return (
+      <div className='Toggle'>
+      <button onClick={this.handleClick}>
+        {this.state.toggleOn ? 'ON' : 'OFF'}
+      </button>
+      </div>
+    )}
 }
 
-ReactDOM.render(<Toggle />, document.getElementById("root"));
+// ReactDOM.render(<Toggle />, document.getElementById("root"));
+export default Toggle;
