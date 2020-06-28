@@ -1,0 +1,57 @@
+
+button {
+  all: unset;
+  display: flex; /* all items arranged horizontally */
+  flex-direction: row; /* x-axis */
+  justify-content: start; 
+  align-items: center; 
+  border-radius: 100px;
+  width: 300px;
+  height: 150px;
+} 
+
+button > img {
+    height: 120%;
+    width: auto;
+    margin: 22px 0 0 10px;
+    animation: example 1s;
+    animation-fill-mode: forwards;
+}
+
+.buttonOn {
+  /* animation: example 1s;   */
+  /* animation-fill-mode: forwards; prevent reset */
+  justify-self: end;
+}
+
+.buttonOff {
+  animation: exampleOff 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {
+     background-color: red;
+     /* width: 600px;
+     margin-left: -50%; */
+     transform: translateX(0%)
+  } 
+  to {
+      background-color: yellow;
+      /* margin-right: 50%; */
+      transform: translateX(100%)
+  }
+}
+
+  @keyframes exampleOff {
+    from {
+        background-color: yellow;
+        /* width: 600px; */
+        /* transform: translateX(100%) */
+    } 
+    to {
+        background-color: red;
+        /* width: 600px; */
+        /* transform: translateX(0%) */
+    }
+  }
