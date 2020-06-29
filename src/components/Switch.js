@@ -1,8 +1,12 @@
 import React from 'react';
 import './Switch.css';
 import pikachu from '../media/pikachubutton_original.png';
+// import {keyframes} from 'styled-components'
 
-const Switch = ({ buttonOn, handleToggle, onColor}) => {
+
+
+const Switch = ({ buttonOn, handleToggle}) => {
+
     return(
         <button
             className={buttonOn ? 'buttonOn' : 'buttonOff'}

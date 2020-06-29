@@ -11,7 +11,6 @@ function App() {
       <Switch 
         buttonOn={ valueOn }
         handleToggle={ () => setValueOn(!valueOn) }
-        onColor='#EF476F'
       />
     </div>
   );
