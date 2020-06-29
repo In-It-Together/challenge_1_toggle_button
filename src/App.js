@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Switch 
         buttonOn={ state }
-        handleToggle={ () => setState(!valueOn) }
+        handleToggle={ () => setState(!state) }
       />
     </div>
   );
