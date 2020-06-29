@@ -21,6 +21,12 @@ button > img {
     left: 3%;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
 .buttonOn > img {
     animation: pikaSlideR 1s;
     animation-fill-mode: forwards; 
